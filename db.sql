@@ -39,7 +39,7 @@ create table NotaDeVenda (
 	data_entrega datetime,
 	total decimal(12, 2),
 	forma_pagamento varchar(120),
-	primary key (cod_nota)
+	primary key (cod_nota_venda)
 );
 
 create table ItemSaida (
@@ -111,7 +111,7 @@ create table Pagamento (
 	valor_parcela decimal(12,2),
 	data_pagamento datetime,
 	pago enum('S', 'N'),
-	primary key (cod_contas_pagar)
+	primary key (cod_pagamento)
 );
 
 alter table Recebimento add constraint Rec_Venda_FK
