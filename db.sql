@@ -9,6 +9,7 @@ create table Cliente (
 
 create table Usuario (
 	cod_usuario int auto_increment,
+  cod_funcao int,
 	nome varchar(120) not null,
 	email varchar(256),
 	telefone char(11),
@@ -17,6 +18,7 @@ create table Usuario (
 
 create table Recebimento (
 	cod_recebimento int auto_increment,
+  cod_nota_venda int,
 	num_parcela int not null,
 	valor_parcela decimal(12,2),
 	data_recebimento datetime,
